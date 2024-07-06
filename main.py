@@ -1,4 +1,3 @@
-# main.py
 from alpacaSetUp import fetch_market_data, plot_market_data
 from gptSetUp import get_market_prediction
 from dataPrep import prepare_data_for_gpt
@@ -27,7 +26,8 @@ def run_trading_bot():
 if __name__ == "__main__":
     import sys
     from scheduler import run_bot_now, schedule_trading_bot
-    
+
+    # Provide the option to run at current time or scheduled time    
     if len(sys.argv) > 1 and sys.argv[1] == "now":
         run_bot_now()
     else:

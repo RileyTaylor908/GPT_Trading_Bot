@@ -1,4 +1,3 @@
-# scheduler.py
 import schedule
 import time
 from main import run_trading_bot

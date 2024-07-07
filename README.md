@@ -17,6 +17,7 @@ Gives GPT-4o stock data from Alpaca in order to make trades.
 ### Config Note
 To run this code you also need to create a config.py
 This is how it should look, replace with your api keys:
+
      ALPACA_API_KEY = ''
      ALPACA_SECRET_KEY = ''
      BASE_URL = ''

@@ -1,0 +1,49 @@
+2024-07-06 20:03:23,786 - INFO - Fetching market data...
+2024-07-06 20:03:23,958 - INFO - Market data fetched.
+2024-07-06 20:03:24,117 - INFO - Saved plot as logs/2024-07-06_20-03-23.png
+2024-07-06 20:03:24,117 - INFO - Preparing data for GPT-4...
+2024-07-06 20:03:24,120 - INFO - Getting market prediction from GPT-4...
+2024-07-06 20:03:28,198 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-06 20:03:28,204 - INFO - Prediction: Prediction: Buy
+
+Reasoning: The market data over the last 30 days shows a strong upward trend, especially notable in the last few days. After a dip on June 10, the market has been generally on an uptrend, with significant gains on June 11, 12, and most recently on July 1, 2, 3, and 5. The close price has increased consistently, reaching a high of 226.350 on July 5.
+
+The trade volume and VWAP (Volume Weighted Average Price) also support a bullish sentiment. For July 5, the VWAP is relatively high at 224.851513, indicating strong buying interest at higher prices. This suggests that investors are willing to pay higher prices, expecting further upside.
+
+Given the ongoing momentum and recent sustained gains, it is reasonable to predict that the market will likely continue its upward trend in the short term. Hence, the recommendation is to buy, capitalizing on the momentum.
+2024-07-06 20:03:28,204 - INFO - Executing trade based on prediction...
+2024-07-06 20:03:28,335 - INFO - Trade details: {'action': 'buy', 'symbol': 'AAPL', 'quantity': 1, 'order': Order({   'asset_class': 'us_equity',
+    'asset_id': 'b0b6dd9d-8b9b-48a9-ba46-b9d54906e415',
+    'canceled_at': None,
+    'client_order_id': '500a3aa9-de10-4885-b183-e4a4f0b552b6',
+    'created_at': '2024-07-07T01:03:28.322945548Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '76ea3a2e-e8c6-4ba7-9c7f-62286611a1e8',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'accepted',
+    'stop_price': None,
+    'submitted_at': '2024-07-07T01:03:28.322945548Z',
+    'subtag': None,
+    'symbol': 'AAPL',
+    'time_in_force': 'gtc',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-07-07T01:03:28.324346448Z'})}
+2024-07-06 20:03:28,335 - INFO - Executed buy trade for 1 shares of AAPL.

@@ -1,19 +1,18 @@
 from alpacaSetUp import api
 
 def execute_trade(symbol, prediction):
-    # trade details for printing out to console
+    # Trade details for printing out to console
     trade_details = {
         "action": "hold",
         "symbol": symbol,
         "quantity": 0
     }
     
-    # Ensure the prediction string contains the expected format
     if "prediction: " in prediction.lower():
-        action = prediction.lower().split("prediction: ")[1].strip()
+        action = prediction.lower().split("prediction: ")[1].split()[0].strip()
         
         # Execute trade based on GPT prediction
-        # Uses alpaca api to make paper trades
+        # Uses Alpaca API to make paper trades
         if action == "buy":
             # Buy logic
             order = api.submit_order(

@@ -2,6 +2,7 @@ import alpaca_trade_api as tradeapi
 from config import ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL
 from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
+from logger import log_info, save_plot, log_filename
 
 api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2')
 
@@ -30,4 +31,4 @@ def plot_market_data(bars, symbol):
     plot = bars.plot(x="timestamp", y="close", legend=False, title=f"{symbol} Closing Prices")
     plot.set_xlabel("Date")
     plot.set_ylabel("Close Price ($)")
-    plt.show()
+    save_plot(plt, log_filename)

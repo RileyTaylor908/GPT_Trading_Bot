@@ -21,10 +21,12 @@ logging.basicConfig(
 
 logger = logging.getLogger()
 
+# Outputs log messages to the console and writes them to a log file
 def log_info(message):
     logger.info(message)
 
 def save_plot(plt, log_filename):
+    # Saves the plot as a PNG file with the same name as the log file
     plot_filename = log_filename.replace('.log', '.png')
     plt.savefig(plot_filename)
     logger.info(f"Saved plot as {plot_filename}")

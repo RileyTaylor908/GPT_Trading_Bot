@@ -17,13 +17,12 @@ def fetch_market_data(symbol):
         tradeapi.TimeFrame.Day,
         start=start_date,
         end=end_date,
-        feed='iex'  # Use IEX feed
-    ).df
-    barset.index = barset.index.tz_convert(None)  # Convert to naive datetime if needed
+        feed='iex'  # Use IEX (Investors Exchange) data
+    ).df # Convert to DataFrame
 
-    # Reset index to make 'timestamp' a column
+    barset.index = barset.index.tz_convert(None)  # Convert to naive datetime for simplicity
+    # Reset index to make 'timestamp' a column for plotting
     barset.reset_index(inplace=True)
-    
     return barset
 
 def plot_market_data(bars, symbol):

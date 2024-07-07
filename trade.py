@@ -1,7 +1,7 @@
 from alpacaSetUp import api
 
 def execute_trade(symbol, prediction):
-    # Trade details for printing out to console
+    # Trade details for logging
     trade_details = {
         "action": "hold",
         "symbol": symbol,

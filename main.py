@@ -5,18 +5,12 @@ from trade import execute_trade
 from logger import log_info
 
 def run_trading_bot():
-    log_info("Fetching market data...")
     market_data = fetch_market_data('AAPL')
-    log_info("Market data fetched.")
     plot_market_data(market_data, 'AAPL')
-    
-    log_info("Preparing data for GPT-4...")
     prepared_data = prepare_data_for_gpt(market_data)
-    log_info("Getting market prediction from GPT-4...")
     prediction = get_market_prediction(prepared_data)
     log_info(f"Prediction: {prediction}")
     
-    log_info("Executing trade based on prediction...")
     trade_details = execute_trade('AAPL', prediction)
     log_info("Trade details: {}".format(trade_details))
     

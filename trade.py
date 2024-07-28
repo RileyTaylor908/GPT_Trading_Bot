@@ -14,7 +14,6 @@ def execute_trade(symbol, prediction):
         # Execute trade based on GPT prediction
         # Uses Alpaca API to make paper trades
         if action == "buy":
-            # Buy logic
             order = api.submit_order(
                 symbol=symbol,
                 qty=1,
@@ -29,7 +28,6 @@ def execute_trade(symbol, prediction):
                 "order": order
             }
         elif action == "sell":
-            # Sell logic
             order = api.submit_order(
                 symbol=symbol,
                 qty=1,
@@ -44,7 +42,6 @@ def execute_trade(symbol, prediction):
                 "order": order
             }
         elif action == "hold":
-            # Hold logic (No trade executed)
             trade_details = {
                 "action": "hold",
                 "symbol": symbol,

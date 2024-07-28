@@ -2,14 +2,14 @@ import logging
 import os
 from datetime import datetime
 
-# Create logs directory if it doesn't exist
+# Create logs directory if not created
 if not os.path.exists("logs"):
     os.makedirs("logs")
 
-# Generate a log file name based on the current date and time
+# Creates filename based on timestamp
 log_filename = os.path.join("logs", datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".log")
 
-# Configure logging
+# Configures logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -21,7 +21,7 @@ logging.basicConfig(
 
 logger = logging.getLogger()
 
-# Outputs log messages to the console and writes them to a log file
+# Outputs log messages to console and log file
 def log_info(message):
     logger.info(message)
 

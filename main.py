@@ -5,8 +5,9 @@ from trade import execute_trade
 from logger import log_info
 
 def run_trading_bot():
-    market_data = fetch_market_data('AAPL')
-    plot_market_data(market_data, 'AAPL')
+    symbol = input("Enter the stock symbol you want to trade (Ex. 'AAPL'): ")
+    market_data = fetch_market_data(symbol)
+    plot_market_data(market_data, symbol)
     prepared_data = prepare_data_for_gpt(market_data)
     prediction = get_market_prediction(prepared_data)
     log_info(f"Prediction: {prediction}")

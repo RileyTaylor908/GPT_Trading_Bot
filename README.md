@@ -1,6 +1,9 @@
 # GPT_Trading_Bot
 Gives GPT-4o stock data from Alpaca in order to make trades.
 
+# Demo
+![]()
+
 ### How to run
 1. Open a terminal
 2. Create virtual enviroment:

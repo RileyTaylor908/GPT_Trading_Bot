@@ -2,7 +2,7 @@
 Gives GPT-4o stock data from Alpaca in order to make trades.
 
 # Demo
-![]()
+![](https://github.com/RileyTaylor908/GPT_Trading_Bot/blob/main/demo.gif)
 
 ### How to run
 1. Open a terminal
